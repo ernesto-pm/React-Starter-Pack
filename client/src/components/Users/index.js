@@ -1,4 +1,5 @@
 import React from 'react';
+import CircularProgress from 'material-ui/CircularProgress';
 
 export default class About extends React.Component {
 
@@ -8,7 +9,7 @@ export default class About extends React.Component {
     }
 
     componentDidMount(){
-        console.log("Users page loaded");
+        console.log("Users page mounted");
         this.getUsers();
     }
 
@@ -17,9 +18,7 @@ export default class About extends React.Component {
             headers: new Headers({
                 'Content-type': 'application/json'
             })
-        })
-            .then(response => response.json())
-            .then(data => this.setState({users: data,gotUsers:true}))
+        }).then(response => response.json()).then(data => this.setState({users: data,gotUsers:true})).then(() => console.log("Got users"))
 
     }
 
@@ -37,7 +36,10 @@ export default class About extends React.Component {
         return (
             <div>
                 <h1 className="text-center">List of users</h1>
-                {this.state.gotUsers ? users : <span>Loading users,please wait</span>}
+                <div className="text-center">
+                    {this.state.gotUsers ? users : <CircularProgress/>}
+                </div>
+
             </div>
         );
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class Contact extends React.Component {
     render () {
