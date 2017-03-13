@@ -3,4 +3,6 @@ import Welcome from './Welcome';
 import About from './About';
 import Contact from './Contact';
 
-export { Navbar, Welcome, About, Contact };
+import UsersIndex from './Users/index';
+
+export { Navbar, Welcome, About, Contact ,UsersIndex};

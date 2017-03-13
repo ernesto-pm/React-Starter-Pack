@@ -41,7 +41,7 @@ switch(process.env.NODE_ENV) {
             { devtool: 'eval-source-map' }, // Default value
             loaders.devServer({
                 host: process.env.host,
-                port: 3000
+                port: 8100
             })
         );
 }

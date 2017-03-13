@@ -1,6 +1,6 @@
 import React from 'react';
 import {Router,Route,browserHistory, IndexRoute} from 'react-router';
-import {Navbar,About,Welcome,Contact} from './components';
+import {Navbar,About,Welcome,Contact,UsersIndex} from './components';
 
 const routes = (
 
@@ -11,7 +11,7 @@ const routes = (
         <Route path="contact" component={Contact}/>
 
         <Route path="users">
-            <IndexRoute component={Welcome}/>
+            <IndexRoute component={UsersIndex}/>
         </Route>
 
     </Route>
